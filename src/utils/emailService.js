@@ -10,6 +10,12 @@ export const sendOrderEmail = async (orderDetails) => {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    console.log('EmailJS Config:', {
+        serviceId: serviceId ? 'Set' : 'Missing',
+        templateId: templateId ? 'Set' : 'Missing',
+        publicKey: publicKey ? 'Set' : 'Missing'
+    });
+
     if (!serviceId || !templateId || !publicKey) {
         console.warn('EmailJS environment variables are missing. Email not sent.');
         return;
