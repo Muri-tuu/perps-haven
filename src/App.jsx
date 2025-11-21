@@ -8,6 +8,7 @@ import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
 import CheckoutModal from './components/CheckoutModal';
+import TawkToChat from './components/TawkToChat';
 import './index.css';
 
 import { ThemeProvider } from './context/ThemeContext';
@@ -27,6 +28,7 @@ function App() {
             <Footer />
             <CartDrawer />
             <CheckoutModal />
+            <TawkToChat />
           </div>
         </ReviewProvider>
       </ThemeProvider>
